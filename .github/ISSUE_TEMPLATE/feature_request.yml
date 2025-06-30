@@ -1,0 +1,43 @@
+name: 🚀 Feature Request
+description: You have a specific idea to suggest for this project 💡
+title: "💡 Feature: "
+labels: ['enhancement']
+projects: ['idembele70/10']
+assignees:
+  - idembele70
+body:
+
+  - type: markdown
+    attributes:
+      value: |
+        **Thanks for taking the time to suggest a new feature!**
+
+        Before you open an issue, please check if a similar issue already exists or has been closed before
+  
+  - type: textarea
+    attributes:
+      label: Actual Behavior
+      description: Tell us what happened instead.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Expected Behavior
+      description: Tell us what should happen.
+    validations:
+      required: true
+  
+  - type: textarea
+    attributes:
+      label: Describe the alternatives you've considered
+      description: A clear and concise description of any alternative solutions or features you've considered.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Acceptance Criteria
+      description: A list of the whole acceptance criteria.
+    validations:
+      required: true
