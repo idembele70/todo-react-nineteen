@@ -8,11 +8,6 @@ on:
       - 'src/**'
       - 'public/**'
   workflow_dispatch:
-  pull_request:
-    branches: [master]
-    paths:
-      - 'src/**'
-      - 'public/**'
 
 
 jobs:
