@@ -22,6 +22,13 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-      - run: npm install
-      - run: npm run deploy
+      - name: install dependencies
+        run: npm install
+      - name: run deploy script
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
   
