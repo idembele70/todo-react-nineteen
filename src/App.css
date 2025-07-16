@@ -8,3 +8,19 @@ body {
   font-size: 1rem;
   font-family: 'Courier New', Courier, monospace;
 }
+
+button.scale {
+  animation: scale .25s ease-out;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(.95);
+  }
+  40% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

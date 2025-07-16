@@ -27,22 +27,22 @@
 }
 
 .add-todo-btn {
-  border-color: #d926a9;
   background-color: #d926a9;
   color: white;
   cursor: pointer;
   user-select: none;
   border-radius: .5rem;
   height: 3rem;
-  border-width: 1px;
+  border: none;
   text-transform: uppercase;
-  transition-property: border-color, background-color;
+  transition-property: background-color;
   transition-duration: .2s;
   transition-timing-function: cubic-bezier(.4,0,.2,1);
   padding: 0 1.25rem;
   font-weight: 600;
   line-height: 1em;
   font-size: 1.55rem;
+  animation: none;
 }
 
 .add-todo-btn:hover {

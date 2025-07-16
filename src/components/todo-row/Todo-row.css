@@ -1,0 +1,49 @@
+.todo-row:not(:last-child){
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: #242933;
+}
+
+.todo-row td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 1rem;
+}
+
+.todo-row .status {
+  text-transform: capitalize;
+}
+
+.todo-row button {
+  height: 2rem;
+  padding: 0 .75rem;
+  font-size: .875rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  border:none;
+  transition: opacity .25s ease-out;
+}
+
+.todo-row button:not(:last-child) {
+  margin-right: .25rem;
+}
+
+.todo-row button:hover {
+  opacity: 0.8;
+}
+
+button.edit {
+  background-color: #fbbd23;
+  color: #382800;
+}
+
+button.complete {
+  background-color: #36d399;
+  color: #003320;
+}
+
+button.delete {
+  background-color: #f87272;
+  color: #470000;
+}

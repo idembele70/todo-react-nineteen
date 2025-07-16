@@ -11,10 +11,16 @@ export interface Todo {
 };
 
 export type TodoContextType =  {
-  todos: Todo[],
-  saveTodo: (todo: Todo) => void,
-  newTodoText: string,
-  setNewTodoText: (text: string) => void,
+  todos: Todo[];
+  saveTodo: (todo: Todo) => void;
+  newTodoText: string;
+  setNewTodoText: (text: string) => void;
   showErrorPopUp: boolean;
-  setErrorPopUp: (visible: boolean) => void
+  setErrorPopUp: (visible: boolean) => void;
+}
+
+export interface ScaleButton {
+  edit: boolean;
+  complete: boolean;
+  delete: boolean;
 }

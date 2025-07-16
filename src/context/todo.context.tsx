@@ -1,15 +1,10 @@
 import { createContext, ReactNode, useState } from "react";
-import { Status, TodoContextType, Todo } from "../types/todo";
+import { Todo, TodoContextType } from "../types/todo";
 
 export const TodoContext = createContext<TodoContextType | null>(null);
 
-export default function TodoProvider({children}: {children: ReactNode}) {
-  const [todos, setTodos] =  useState<Todo[]>([{
-    id: 1,
-    createdAt: Date.now(),
-    status: Status.PENDING,
-    text: 'Hello World!'
-  }]);
+export default function TodoProvider({children}: {readonly children: ReactNode}) {
+  const [todos, setTodos] =  useState<Todo[]>([]);
 
   const saveTodo = (todo: Todo) => {
     setTodos(todos => [...todos, todo]);
