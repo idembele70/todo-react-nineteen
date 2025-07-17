@@ -1,6 +1,6 @@
 import { useCallback, useContext, useEffect, useRef, useState } from 'react';
-import './Alert-message-pop-up.css';
-import { TodoContext } from '../../../context/todo.context';
+import './AlertMessagePopUp.css';
+import { TodoContext } from '../../../context/todoContext';
 import { TodoContextType } from '../../../types/todo';
 
 export default function AlertMessagePopUp() {

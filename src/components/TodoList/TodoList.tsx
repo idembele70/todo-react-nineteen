@@ -1,8 +1,8 @@
 import { useContext } from 'react'
-import './Todo-list.css'
-import { TodoContext } from '../../context/todo.context'
+import './TodoList.css'
+import { TodoContext } from '../../context/todoContext'
 import { TodoContextType } from '../../types/todo';
-import TodoRow from '../todo-row/Todo-row';
+import TodoRow from '../TodoRow/TodoRow';
 
 export default function TodoList() {
   const { todos } = useContext(TodoContext) as TodoContextType;

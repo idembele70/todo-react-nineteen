@@ -1,8 +1,8 @@
 import './App.css';
-import AddTodo from './components/add-todo/Add-todo.components';
+import AddTodo from './components/AddTodo/AddTodo';
 import Container from './components/container/Container';
-import TodoList from './components/todo-list/Todo-list';
-import TodoProvider from './context/todo.context';
+import TodoList from './components/TodoList/TodoList';
+import TodoProvider from './context/todoContext';
 
 function App() {
   return (

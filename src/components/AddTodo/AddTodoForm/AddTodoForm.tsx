@@ -1,8 +1,8 @@
 import { useCallback, useContext, useEffect, useRef, useState } from 'react';
-import { TodoContext } from '../../../context/todo.context';
+import { TodoContext } from '../../../context/todoContext';
 import { Status, TodoContextType } from '../../../types/todo';
-import { clsx, SCALE_ANIMATION_DURATION } from '../../../utilities/todo.utilities';
-import './Add-todo-form.css';
+import { clsx, SCALE_ANIMATION_DURATION } from '../../../utilities/todoUtilities';
+import './AddTodoForm.css';
 
 export default function AddTodoForm() {
   const timeout = useRef<NodeJS.Timeout | null>(null)
