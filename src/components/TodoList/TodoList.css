@@ -1,0 +1,28 @@
+table {
+  width: 100%;
+  text-align: left;
+  border-radius: .5rem;
+  overflow: hidden;
+  margin-top: .625rem;
+  table-layout: fixed;
+}
+
+table thead {
+  background-color: #242933;
+} 
+
+table thead th {
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1rem;
+  padding: 1rem;
+}
+
+table tbody {
+  background-color: #2a303c;
+}
+
+.no-task {
+  text-align: center;
+  padding: 1rem;
+}
