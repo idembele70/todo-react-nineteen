@@ -1,6 +1,6 @@
 export enum Status {
   COMPLETED = 'COMPLETED',
-  PENDING = 'PENDING'
+  PENDING = 'PENDING',
 };
 
 export interface Todo {
@@ -15,8 +15,8 @@ export type TodoContextType =  {
   saveTodo: (todo: Todo) => void;
   newTodoText: string;
   setNewTodoText: (text: string) => void;
-  showErrorPopUp: boolean;
-  setErrorPopUp: (visible: boolean) => void;
+  messagePopUpVisible: boolean;
+  setMessagePopUpVisible: (visible: boolean) => void;
 }
 
 export interface ScaleButton {

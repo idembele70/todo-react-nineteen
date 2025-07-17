@@ -3,7 +3,7 @@
   justify-content: center;
 }
 
-.add-todo-input {
+#add-todo-input {
   width: 100%;
   max-width: 380px;
   border: 1px solid #d926a9e1;
@@ -20,7 +20,7 @@
   margin-right: 10px
 }
 
-.add-todo-input:focus {
+#add-todo-input:focus {
   border-color: #d926a9;
   outline: 0;
   box-shadow: 0 0 0 .125rem #d926a9;

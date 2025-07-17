@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { ScaleButton, Status, Todo } from "../../types/todo";
-import { clsx, SCALE_ANIMATION_DURATION } from "../../utilities/todoUtilities";
+import { clearTimeoutRef, clsx, SCALE_ANIMATION_DURATION } from "../../utilities/todoUtilities";
 import './TodoRow.css';
 
 export default function TodoRow({todo}: {readonly todo: Todo}) {
@@ -23,8 +23,7 @@ export default function TodoRow({todo}: {readonly todo: Todo}) {
 
   useEffect(() => {
     return () => {
-      if(timeout.current)
-        clearTimeout(timeout.current)
+      clearTimeoutRef(timeout);
     }
   }, [])
 

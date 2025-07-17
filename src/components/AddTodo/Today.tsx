@@ -35,7 +35,9 @@ export default function Today() {
     marginBottom: 15
   }
 
-  return <h2 style={style}>
-    {randomWord + today}
-  </h2>
+  return (
+    <h2 style={style}>
+      {randomWord + today}
+    </h2>
+  )
 };

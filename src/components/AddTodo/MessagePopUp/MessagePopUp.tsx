@@ -1,10 +1,11 @@
 import { useCallback, useContext, useEffect, useRef, useState } from 'react';
-import './AlertMessagePopUp.css';
 import { TodoContext } from '../../../context/todoContext';
 import { TodoContextType } from '../../../types/todo';
+import { clearTimeoutRef, MESSAGE_POPUP_DURATION } from '../../../utilities/todoUtilities';
+import './MessagePopUp.css';
 
 export default function AlertMessagePopUp() {
-  const { newTodoText, showErrorPopUp, setErrorPopUp } = useContext(TodoContext) as TodoContextType;
+  const { newTodoText, messagePopUpVisible, setMessagePopUpVisible } = useContext(TodoContext) as TodoContextType;
   const [visible, setVisible] = useState(false);
   const [message, setMessage] = useState('');
   const timeout = useRef<NodeJS.Timeout | null>(null)
@@ -17,20 +18,19 @@ export default function AlertMessagePopUp() {
   }, [newTodoText])
 
   const displayContent = useCallback(() => {
-    setVisible(showErrorPopUp)
+    setVisible(messagePopUpVisible)
      timeout.current = setTimeout(() => {
       setVisible(false);
-      setErrorPopUp(false)
-    }, 1500);
-  }, [setErrorPopUp, showErrorPopUp])
+      setMessagePopUpVisible(false)
+    }, MESSAGE_POPUP_DURATION);
+  }, [setMessagePopUpVisible, messagePopUpVisible])
 
   useEffect(() => {
     defineMessage();
     displayContent();
 
     return () => {
-      if(timeout?.current)
-        clearTimeout(timeout.current);
+     clearTimeoutRef(timeout);
     }
   }, [defineMessage, displayContent])
 

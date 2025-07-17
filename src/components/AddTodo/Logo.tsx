@@ -5,8 +5,8 @@ export default function Logo() {
       fontSize: 30,
       fontWeight: 700,
       marginBottom: 10,
-      textAlign: 'center'
+      textAlign: 'center',
    };
-   
+
    return <h1 style={style}>Todo List</h1>
 }
